@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-heatmap/leaflet-heatmap.css" />
+    <title>World Map Application</title>
+</head>
+<body>
+
+    <div id="mapIcon" class="icon" onclick="showMapDialog()">
+        Click me to show map options
+    </div>
+
+    <div id="map" class="leaflet-map"></div>
+
+    <div id="mapDialog" class="dialog">
+        <h2>Map Types</h2>
+        <select id="mapDropdown">
+            <option value="heatmap">Heat map</option>
+            <option value="choropleth">Choropleth map</option>
+            <option value="clustering">Cluster map</option>
+        </select>
+        <button onclick="showSelectedMap()">Show Map</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet-heatmap/leaflet-heatmap.js"></script>
+    <script defer src="script.js"></script>
+</body>
+</html>
